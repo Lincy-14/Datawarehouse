@@ -9,7 +9,7 @@ The ETL pipeline is built for a database that was hosted on Redshift and execute
 
 ## JSON Data in S3
 
-**Song dataset*:** Song dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song.The files are partitioned by the first three letters of each song's track ID. For example, here are filepaths to two files in this dataset.
+**Song dataset:** Song dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song.The files are partitioned by the first three letters of each song's track ID. For example, here are filepaths to two files in this dataset.
 
 song_data/A/B/C/TRABCEI128F424C983.json
 song_data/A/A/B/TRAABJL12903CDCF1A.json
