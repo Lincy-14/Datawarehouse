@@ -38,17 +38,17 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 
 ### Fact table
 
-1.songplays - records in log data associated with song plays i.e. records with page NextSong Columns
+1. songplays - records in log data associated with song plays i.e. records with page NextSong Columns
 
 ### Dimension table
 
-1.users - users in the app
+1. users - users in the app
 
-2.songs - songs in music database
+2. songs - songs in music database
 
-3.artists - artists in music database
+3. artists - artists in music database
 
-4.time - timestamps of records in songplays broken down into specific units
+4. time - timestamps of records in songplays broken down into specific units
 
 ## ETL Pipeline 
 
@@ -60,21 +60,21 @@ Finally, the ETL pipeline will load the data from the staging tables and insert 
 
 ## Repository Structure
 
-1.create_tables.py : Python script to create the fact and dimension analytics tables on Redshift
+1. create_tables.py : Python script to create the fact and dimension analytics tables on Redshift
 
-2.etl.py : Python script to run the ETL pipeline that will load the data from S3 into staging tables on Redshift. It will then load the data from the staging tables to the analytics tables on Redshift
+2. etl.py : Python script to run the ETL pipeline that will load the data from S3 into staging tables on Redshift. It will then load the data from the staging tables to the analytics tables on Redshift
 
-3.sql_queries.py : Script containing the SQL statements
+3. sql_queries.py : Script containing the SQL statements
 
-4.dwh.cfg : Configuration file
+4. dwh.cfg : Configuration file
 
 ## Execution steps
 
-1.Create a cluster in Redshift
-2.Fill in the details under [CLUSTER] and [IAM_ROLE] tags in the configuration file (dwh.cfg)
-3.Execute create_tables.py to create connection with the respective database and Redshift cluster.In this step itself fact, dimension and staging tables will be created
-4.Execute the etl.py to load the data in S3 to the staging tables followed by the data export from the staging tables to facts and dimension tables.
-5.Query the data from the respective tables.
+1. Create a cluster in Redshift
+2. Fill in the details under [CLUSTER] and [IAM_ROLE] tags in the configuration file (dwh.cfg)
+3. Execute create_tables.py to create connection with the respective database and Redshift cluster.In this step itself fact, dimension and staging tables will be created
+4. Execute the etl.py to load the data in S3 to the staging tables followed by the data export from the staging tables to facts and dimension tables.
+5. Query the data from the respective tables.
 
 ## Sample Queries
 
